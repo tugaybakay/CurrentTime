@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "type": "module",
+  "dependencies": {
+    "dayjs": "^1.11.13"
+  }
+}

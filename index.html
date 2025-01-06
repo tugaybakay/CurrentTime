@@ -1,0 +1,60 @@
+<!doctype html>
+<html > 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>Current Time</title>
+  <link rel="icon" type="image/x-icon" href="./imgs/pp.png"></link>
+</head>
+
+<body class="h-screen flex justify-center items-center">
+  <div class="bg-gray-100 w-3/5 h-3/4 rounded-md border border-black flex flex-col justify-between items-center p-6 min-w-min min-h-min">
+    <h1 class="font-bold text-5xl max-sm:text-2xl max-md:text-3xl">
+      Current Time
+    </h1>
+    <div class="flex flex-col items-end">
+      <button id="select-tz" class="text-gray-400 max-sm:text-xs text-md hover:text-black transition-colors outline-none max-md:text-sm">
+        Europe/Istanbul
+      </button>
+      <dialog id="tz-modal" class="backdrop:bg-black backdrop:opacity-30 w-3/12 h-1/5 min-w-min p-4 rounded-md border border-black min-h-min max-sm:h-1/6 max-sm:w-6/12">
+        <div class="flex flex-col justify-between w-full h-full">
+          <div class="flex justify-between items-baseline">
+            <h3 class="text-xl font-semibold max-sm:text-sm">
+              Time Zone
+            </h3>
+            <button data-close-modal class="border-0 outline-none text-2xl font-semibold max-sm:text-lg">
+              X
+            </button>
+          </div>
+          <form>
+            <label class="block text-nowrap mb-1 max-sm:text-xs" for="selected-time-zone">
+              Pick a time zone:
+            </label>
+            <select name="selected-time-zone" id="selected-time-zone" class="outline-none cursor-pointer w-full border border-black rounded text-xl max-md:text-sm p-1 max-sm:text-xs">
+            </select>
+          </form>
+        </div>
+      </dialog>
+      <h1 id="time-header" class="text-9xl leading-tight max-sm:text-6xl max-md:text-8xl">
+        16:33:00
+      </h1>
+      <h3 id="current-date" class="text-xl max-sm:text-sm max-md:text-lg">
+        Lorem ipsum dolor sit amet.
+      </h3>
+    </div>
+    <footer>
+      <p class="max-sm:text-sm">
+        Made by 
+        <a href="https://github.com/tugaybakay" target="_blank" class="underline font-semibold outline-none visited:text-black">
+          Tugaybakay
+        </a>
+      </p>
+    </footer>
+  </div>
+</body>
+
+<script type="module" src="./apiClient.js"></script>
+<script type="module" src="./date.js"></script>
+<script type="module" src="./app.js"></script>
+</html>
